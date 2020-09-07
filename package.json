@@ -1,16 +1,16 @@
-{ "name" : "xmlrpc"
-, "description" : "A pure JavaScript XML-RPC client and server."
+{ "name" : "xmlrpc-rosnodejs"
+, "description" : "A pure JavaScript XML-RPC client and server. Patched fork from https://github.com/baalexander/node-xmlrpc."
 , "keywords" : [ "xml-rpc", "xmlrpc", "xml", "rpc" ]
-, "version" : "1.3.2"
+, "version" : "1.4.0"
 , "preferGlobal" : false
-, "homepage" : "https://github.com/baalexander/node-xmlrpc"
-, "author" : "Brandon Alexander <baalexander@gmail.com> (https://github.com/baalexander)"
+, "homepage" : "https://github.com/chfritz/node-xmlrpc"
+, "author" : "Christian Fritz <christian.fritz@gmail.com> (https://github.com/chfritz)"
 , "repository" : {
     "type" : "git"
-  , "url" : "git://github.com/baalexander/node-xmlrpc.git"
+  , "url" : "git://github.com/chfritz/node-xmlrpc.git"
   }
 , "bugs" : {
-    "url" : "https://github.com/baalexander/node-xmlrpc/issues"
+    "url" : "https://github.com/chfritz/node-xmlrpc/issues"
   }
 , "directories" : {
     "lib" : "./lib"
@@ -32,4 +32,3 @@
   }
 , "license" : "MIT"
 }
-
