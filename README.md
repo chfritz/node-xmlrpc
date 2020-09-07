@@ -1,3 +1,9 @@
+This is a fork of https://github.com/baalexander/node-xmlrpc that fixes an issue that was preventing https://github.com/RethinkRobotics-opensource/rosnodejs from working correctly. We published this as a separate npm package because the original package seems to be unmaintained (our [PR](https://github.com/baalexander/node-xmlrpc/pull/132) has not been reviewed in over four years).
+
+Original description below.
+
+------
+
 ## The What
 
 The xmlrpc module is a pure JavaScript XML-RPC server and client for node.js.
@@ -232,4 +238,3 @@ Released under the MIT license. See the LICENSE file for the complete wording.
 Thank you to all [the
 authors](https://github.com/baalexander/node-xmlrpc/graphs/contributors) and
 everyone who has filed an issue to help make xmlrpc better.
-
