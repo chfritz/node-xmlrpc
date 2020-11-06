@@ -8,17 +8,15 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Set Up Environment
+          name: Set Up CI Environment
           command: |
-            echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-            git clone --depth 1 git@github.com:6RiverSystems/ci_scripts.git
+            mkdir ci_scripts
+            curl -H "Authorization: token $GITHUB_TOKEN" -H "Accept:application/vnd.github.v3.raw" https://api.github.com/repos/6RiverSystems/ci_scripts/contents/ci_tool.sh > ci_scripts/ci_tool.sh
+            chmod +x ci_scripts/ci_tool.sh
             ci_scripts/ci_tool.sh --setup_npm
       - run:
           name: Install Dependencies
           command: npm ci
-      - run:
-          name: Calculate Version
-          command: ci_scripts/ci_tool.sh --run_release
       - persist_to_workspace:
           root: ./
           paths:
