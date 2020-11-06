@@ -28,13 +28,8 @@ jobs:
     steps:
       - attach_workspace:
           at: ./
-      - run:
-          name: Run release
-          command: |
-            ci_scripts/ci_tool.sh --setup_npm
-      - run:
-          name: npm publish
-          command: npm publish
+      - sixrs-gke/run-release
+      - sixrs-gke/npm-publish
 
 workflows:
   version: 2
